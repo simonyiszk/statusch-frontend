@@ -5,7 +5,6 @@ import { Route, Switch, Link } from 'react-router-dom'
 import GrommetApp from 'grommet/components/App'
 import Box from 'grommet/components/Box'
 import Header from 'grommet/components/Header'
-import Menu from 'grommet/components/Menu'
 import Toast from 'grommet/components/Toast'
 import Anchor from 'grommet/components/Anchor'
 import Footer from 'grommet/components/Footer'
@@ -15,7 +14,7 @@ import Status from 'grommet/components/icons/Status'
 import SocialGithubIcon from 'grommet/components/icons/base/SocialGithub'
 
 import { getLaundry, hideToast, loadSave } from '../actions'
-import { Printer, /* Study,*/ NotFound } from '../components'
+import { NotFound } from '../components'
 import LaundryContainer from './LaundryContainer'
 
 
@@ -75,16 +74,6 @@ class App extends Component {
               </Link>
             </Box>
             <Box align='end' flex='grow'>
-              <Menu
-                label='Menü'
-                inline={this.state.desktop}
-                primary={false}
-                direction='row'
-              >
-                <Anchor className='menu-anchor' path='/'>MosógépSCH</Anchor>
-                {/* <Anchor className='menu-anchor' path='/study-rooms'>TanulóSCH</Anchor> */}
-                <Anchor className='menu-anchor' path='/printer'>PrinterSCH</Anchor>
-              </Menu>
             </Box>
           </Box>
         </Header>
@@ -92,8 +81,6 @@ class App extends Component {
         <Section>
           <Switch>
             <Route exact path='/' component={LaundryContainer} />
-            {/* <Route exact path='/study-rooms' component={Study} /> */}
-            <Route exact path='/printer' component={Printer} />
             <Route component={NotFound} />
           </Switch>
         </Section>

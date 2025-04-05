@@ -74,6 +74,7 @@ class App extends Component {
               </Link>
             </Box>
             <Box align='end' flex='grow'>
+              <a href='https://github.com/simonyiszk/mosogep-sch-reboot/issues'>Hibabejelentés</a>
             </Box>
           </Box>
         </Header>
